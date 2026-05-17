@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cvećara</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
     <nav>
@@ -17,9 +19,39 @@
     </nav>
 
     <main>
-        <h1>Dobrodošli u našu cvećaru 🌸</h1>
-        <p>Najlepši buketi za sve prilike</p>
+        <section class="hero">
+            <h1>Dobrodošli u našu cvećaru 🌸</h1>
+            <p>Buketi za rođendane, godišnjice i posebne trenutke.</p>
+            <a href="#" class="btn">Pogledaj ponudu</a>
+        </section>
+
+        <section class="featured-products">
+            <h2>Izdvojeni buketi</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="{{ url_for('static', filename='images/buket1.jpg') }}" alt="Romantični buket">
+                    <h3>Romantični buket</h3>
+                    <p>2.500 RSD</p>
+                    <button>Poruči</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="{{ url_for('static', filename='images/buket2.jpg') }}" alt="Prolećni buket">
+                    <h3>Prolećni buket</h3>
+                    <p>3.000 RSD</p>
+                    <button>Poruči</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="{{ url_for('static', filename='images/buket3.jpg') }}" alt="Elegantni buket">
+                    <h3>Elegantni buket</h3>
+                    <p>3.500 RSD</p>
+                    <button>Poruči</button>
+                </article>
+            </div>
+        </section>
     </main>
 
 </body>
+
 </html>
