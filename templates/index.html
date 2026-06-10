@@ -1,57 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
-    <title>Cvećara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Garden | Cvećara</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
-    <nav>
-        <h2>Cvećara</h2>
-        <ul>
-            <li><a href="/">Početna</a></li>
-            <li><a href="#">Proizvodi</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-    </nav>
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <span class="logo-small">infinity</span>
+                <span class="logo-main">GARDEN</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/" class="active">Početna</a></li>
+                <li><a href="#buketi">Buketi</a></li>
+                <li><a href="#porucivanje">Poručivanje</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
+
+        <!-- HERO SECTION -->
         <section class="hero">
-            <h1>Dobrodošli u našu cvećaru 🌸</h1>
-            <p>Buketi za rođendane, godišnjice i posebne trenutke.</p>
-            <a href="#" class="btn">Pogledaj ponudu</a>
+            <div class="hero-content">
+                <p class="eyebrow">Cvećara Infinity Garden</p>
+
+                <h1>
+                    Buketi za <br>
+                    <span>posebne trenutke</span>
+                </h1>
+
+                <p class="hero-text">
+                    Nežni, elegantni i pažljivo aranžirani buketi za rođendane,
+                    godišnjice i lepa iznenađenja.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#buketi" class="btn btn-primary">Pogledaj bukete</a>
+                    <a href="#kontakt" class="btn btn-link">Kontakt</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <span>Hero slika buketa</span>
+                </div>
+            </div>
         </section>
 
-        <section class="featured-products">
-            <h2>Izdvojeni buketi</h2>
-            <div class="products-grid">
-                <article class="product-card">
-                    <img src="{{ url_for('static', filename='images/buket1.jpg') }}" alt="Romantični buket">
-                    <h3>Romantični buket</h3>
-                    <p>2.500 RSD</p>
-                    <button>Poruči</button>
+        <!-- FEATURES -->
+        <section class="features">
+            <article class="feature-card">
+                <div class="feature-icon">🌷</div>
+
+                <div>
+                    <h3>Sveže cveće</h3>
+                    <p>Pažljivo birano cveće za svaki aranžman.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">🍃</div>
+
+                <div>
+                    <h3>Ručno aranžirano</h3>
+                    <p>Svaki buket se pravi sa posebnom pažnjom.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">🎁</div>
+
+                <div>
+                    <h3>Za svaku priliku</h3>
+                    <p>Buketi za poklone, iznenađenja i posebne datume.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- BOUQUETS PREVIEW -->
+        <section class="section" id="buketi">
+            <div class="section-heading">
+                <p class="eyebrow">Ponuda</p>
+
+                <h2>Izdvojeni buketi</h2>
+
+                <p>
+                    Pogledaj nekoliko predloga buketa. Svaki aranžman može biti prilagođen
+                    prilici, bojama i željama.
+                </p>
+            </div>
+
+            <div class="bouquet-grid">
+                <article class="bouquet-card">
+                    <div class="card-image-placeholder">
+                        <span>Slika buketa</span>
+                    </div>
+
+                    <div class="bouquet-info">
+                        <h3>Nežni roze buket</h3>
+                        <p>Roze tonovi, belo cveće i elegantno pakovanje.</p>
+                        <a href="#kontakt">Poruči / Pitaj za cenu</a>
+                    </div>
                 </article>
 
-                <article class="product-card">
-                    <img src="{{ url_for('static', filename='images/buket2.jpg') }}" alt="Prolećni buket">
-                    <h3>Prolećni buket</h3>
-                    <p>3.000 RSD</p>
-                    <button>Poruči</button>
+                <article class="bouquet-card">
+                    <div class="card-image-placeholder">
+                        <span>Slika buketa</span>
+                    </div>
+
+                    <div class="bouquet-info">
+                        <h3>Romantični buket</h3>
+                        <p>Klasičan izbor za godišnjice, poklone i iznenađenja.</p>
+                        <a href="#kontakt">Poruči / Pitaj za cenu</a>
+                    </div>
                 </article>
 
-                <article class="product-card">
-                    <img src="{{ url_for('static', filename='images/buket3.jpg') }}" alt="Elegantni buket">
-                    <h3>Elegantni buket</h3>
-                    <p>3.500 RSD</p>
-                    <button>Poruči</button>
+                <article class="bouquet-card">
+                    <div class="card-image-placeholder">
+                        <span>Slika buketa</span>
+                    </div>
+
+                    <div class="bouquet-info">
+                        <h3>Premium buket</h3>
+                        <p>Efektan aranžman za posebne datume i važne trenutke.</p>
+                        <a href="#kontakt">Poruči / Pitaj za cenu</a>
+                    </div>
                 </article>
             </div>
         </section>
+
+        <!-- ORDERING -->
+        <section class="section order-section" id="porucivanje">
+            <div class="section-heading">
+                <p class="eyebrow">Jednostavno poručivanje</p>
+                <h2>Kako poručiti?</h2>
+            </div>
+
+            <div class="steps">
+                <article class="step-card">
+                    <span>01</span>
+                    <h3>Izaberi buket</h3>
+                    <p>Odaberi postojeći aranžman ili pošalji svoju ideju.</p>
+                </article>
+
+                <article class="step-card">
+                    <span>02</span>
+                    <h3>Pošalji podatke</h3>
+                    <p>Javi datum, adresu i poruku za karticu.</p>
+                </article>
+
+                <article class="step-card">
+                    <span>03</span>
+                    <h3>Dogovor i izrada</h3>
+                    <p>Potvrđujemo detalje i pripremamo buket.</p>
+                </article>
+
+                <article class="step-card">
+                    <span>04</span>
+                    <h3>Preuzimanje ili dostava</h3>
+                    <p>Buket stiže spreman za poklon.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="kontakt">
+            <div class="contact-content">
+                <p class="eyebrow">Kontakt</p>
+
+                <h2>Poruči buket ili pošalji upit</h2>
+
+                <p>
+                    Za porudžbine, dostupnost cveća i dogovor oko aranžmana,
+                    kontaktiraj Infinity Garden preko Instagrama ili telefona.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <p><strong>Instagram:</strong> @cvecara.infinity.garden</p>
+                <p><strong>Telefon:</strong> +381 60 000 0000</p>
+                <p><strong>Lokacija:</strong> Novi Sad</p>
+                <p><strong>Radno vreme:</strong> 09:00 - 20:00</p>
+            </div>
+        </section>
+
     </main>
 
-</body>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Infinity Garden. Sva prava zadržana.</p>
+    </footer>
 
+</body>
 </html>
