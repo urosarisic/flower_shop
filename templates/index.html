@@ -19,7 +19,7 @@
 
             <ul class="nav-links">
                 <li><a href="/" class="active">Početna</a></li>
-                <li><a href="#buketi">Buketi</a></li>
+                <li><a href="{{ url_for('buketi') }}">Buketi</a></li>
                 <li><a href="#porucivanje">Poručivanje</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
@@ -44,7 +44,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#buketi" class="btn btn-primary">Pogledaj bukete</a>
+                    <a href="{{ url_for('buketi') }}" class="btn btn-primary">Pogledaj bukete</a>
                     <a href="#kontakt" class="btn btn-link">Kontakt</a>
                 </div>
             </div>
